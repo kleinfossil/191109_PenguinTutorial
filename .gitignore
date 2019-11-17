@@ -9,8 +9,8 @@
 [Bb]uilds/
 [Ll]ogs/
 [Mm]emoryCaptures/
-/[Aa]ssets/Animations*
-/[Aa]ssets/Meshes*
+**/Assets/Animations/
+**/Assets/Meshes/
 
 
 # Never ignore Asset meta data
