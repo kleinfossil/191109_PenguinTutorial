@@ -1,5 +1,5 @@
 This repository is created based on the Tutorial from Immersive Limit. All credit goes to him.
-Link to the tutorial: https://www.youtube.com/watch?v=y9ZkCG9hbfQ
+Link to the tutorial: https://www.youtube.com/watch?v=axF_nHHchFQ
 If you need the animators or the meshes, please go to the youtube video and download them from Immersive Limit. 
 
 ##
