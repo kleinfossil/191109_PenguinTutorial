@@ -6,6 +6,7 @@ using MLAgents;
 public class PenguinAcademy : Academy
 {
     private PenguinArea[] penguinAreas;
+    public float overwriteFishAmount;
 
     public override void AcademyReset()
     {
@@ -21,6 +22,9 @@ public class PenguinAcademy : Academy
         {
             penguinArea.fishSpeed = resetParameters["fish_speed"];
             penguinArea.feedRadius = resetParameters["feed_radius"];
+            penguinArea.fishAmount = resetParameters["fish_amount"];
+            if (overwriteFishAmount != 4) { penguinArea.fishAmount = overwriteFishAmount; }
+            
             penguinArea.ResetArea();
         }
     }

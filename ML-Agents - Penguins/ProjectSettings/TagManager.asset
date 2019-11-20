@@ -29,6 +29,7 @@ TagManager:
   - symbol_X_Goal
   - baby
   - fish
+  - penguin
   layers:
   - Default
   - TransparentFX

@@ -2,24 +2,46 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MLAgents;
 
 public class Fish : MonoBehaviour
 {
     public float fishSpeed;
 
-    private float randomizedSpeed = 0f;
-    private float nextActionTime = -1f;
+    private PenguinArea penguinArea;
+
+    [HideInInspector]
+    public RayPerception3D rayPerception;
+
+    //private float randomizedSpeed = 0f;
+    //private float nextActionTime = -1f;
     private Vector3 targetPosition;
+
+    public float currentX = 0f;
 
     private void FixedUpdate()
     {
-        if (fishSpeed > 0f)
+        /*if (fishSpeed > 0f)
         {
             Swim();
-        }
+        }*/
     }
 
-    private void Swim()
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.CompareTag("penguin"))
+        {
+            penguinArea.fishAgent.AddReward(-1f);
+        }
+
+    }
+
+    private void Start()
+    {
+        penguinArea = GetComponentInParent<PenguinArea>();
+    }
+
+    /*private void Swim()
     {
         if (Time.fixedTime >= nextActionTime)
         {
@@ -50,5 +72,5 @@ public class Fish : MonoBehaviour
                 nextActionTime = Time.fixedTime;
             }
         }
-    }
+    }*/
 }

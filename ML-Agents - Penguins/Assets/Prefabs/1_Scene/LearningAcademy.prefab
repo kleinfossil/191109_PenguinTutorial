@@ -61,3 +61,5 @@ MonoBehaviour:
       value: 0
     - key: feed_radius
       value: 1
+    - key: fish_amount
+      value: 4
